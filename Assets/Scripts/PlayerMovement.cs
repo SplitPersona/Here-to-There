@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
         Jump();
         }
+
     }
 
     private void Jump(){
