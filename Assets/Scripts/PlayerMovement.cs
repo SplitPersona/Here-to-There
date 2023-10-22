@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded; 
     private bool facingRight = true; 
 
+    public TeleportBehaviour TeleportPrefab;
+    public Transform LaunchOffset;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -32,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)&& grounded)
         {
         Jump();
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(TeleportPrefab, LaunchOffset.position, transform.rotation);
         }
 
     }
