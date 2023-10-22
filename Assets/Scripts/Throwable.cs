@@ -7,10 +7,13 @@ public class Throwable : MonoBehaviour
     Vector3 throwVector;
     Rigidbody2D _rb;
     LineRenderer _lr;
+    private Animator anim; 
+
     void Awake()
     {
         _rb = this.GetComponent<Rigidbody2D>();
         _lr = this.GetComponent<LineRenderer>();
+        anim = GetComponent<Animator>();
     }
     //onmouse events possible thanks to monobehaviour + collider2d
     void OnMouseDown()
@@ -49,6 +52,11 @@ public class Throwable : MonoBehaviour
     }
     public void Throw()
     {
-        _rb.AddForce(throwVector);
+        Vector3 playerPosition = transform.position;
+         _rb.AddForce(throwVector);
+    
+             // Set the object's position to the player's position
+
+        transform.position = playerPosition;
     }
 }
