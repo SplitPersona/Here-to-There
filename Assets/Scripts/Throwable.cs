@@ -52,11 +52,6 @@ public class Throwable : MonoBehaviour
     }
     public void Throw()
     {
-        Vector3 playerPosition = transform.position;
-         _rb.AddForce(throwVector);
-    
-             // Set the object's position to the player's position
-
-        transform.position = playerPosition;
+        _rb.AddForce(throwVector);
     }
 }
