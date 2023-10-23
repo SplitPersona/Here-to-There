@@ -194,3 +194,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b5ebb8d037fc5c44b8ce10043d5cfe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 4.5
+  TeleportDestination: {fileID: 4323030482732708255, guid: 95ab8390562183d44aa55289b2e6cf20, type: 3}

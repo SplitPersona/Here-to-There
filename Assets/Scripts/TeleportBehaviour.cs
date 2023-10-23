@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class TeleportBehaviour : MonoBehaviour
 {
+    
     public float Speed = 4.5f;
+
+    public GameObject TeleportDestination;
 
     private void Update()
     {
-        transform.position += -transform.right * Time.deltaTime * Speed;
+        transform.position += transform.right * Time.deltaTime * Speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroys(GameObject); 
+        // Set TeleportDestination to the current location
+         TeleportDestination = transform.gameObject;
+        // Destroy the gameObject
+        Destroy(gameObject);
+        //Destroy(gameObject); 
     }
 
 
