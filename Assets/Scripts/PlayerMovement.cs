@@ -38,8 +38,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire1"))
+        //if (Input.GetKey(KeyCode.E))
         {
-            Instantiate(TeleportPrefab, LaunchOffset.position, transform.rotation);
+            Instantiate(TeleportPrefab, LaunchOffset.position, LaunchOffset.transform.rotation);
         }
 
     }
@@ -48,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
         body.velocity = new Vector2(body.velocity.x, jumpHeight);
         //anim.SetTrigger("jump");
         anim.SetBool("Jump", true);
-        anim.SetBool("Idle",false);
         grounded = false;
     }
     private void OnCollisionEnter2D(Collision2D other) {
@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         //anim.SetBool("Jump", False);
         grounded = true;
         anim.SetBool("Jump", false);
-        anim.SetBool("Idle",true);
     }
     private void Flip()
     {
@@ -64,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight; 
+        LaunchOffset.transform.Rotate(0f, 180f, 0f);
     }
 
 
