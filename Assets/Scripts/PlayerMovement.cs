@@ -41,7 +41,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire1"))
+        //if (Input.GetKey(KeyCode.E))
         {
+<<<<<<< HEAD
             TeleportBehaviour teleportInstance = Instantiate(TeleportPrefab, LaunchOffset.position, LaunchOffset.transform.rotation);
             // Set the player's position to match the teleportDestination, even if it's destroyed
             if (teleportInstance.TeleportDestination != null)
@@ -49,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = teleportInstance.TeleportDestination.transform.position;
             }
             destinationFollower.teleport2 = teleportInstance.transform;
+=======
+            Instantiate(TeleportPrefab, LaunchOffset.position, LaunchOffset.transform.rotation);
+>>>>>>> d4b4981e8f902af6190563156090e7f1efdb6324
         }
     }
 
@@ -58,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Jump", true);
         grounded = false;
     }
+<<<<<<< HEAD
     
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -66,6 +72,13 @@ public class PlayerMovement : MonoBehaviour
             grounded = true;
             anim.SetBool("Jump", false);
         }
+=======
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Ground"))
+        //anim.SetBool("Jump", False);
+        grounded = true;
+        anim.SetBool("Jump", false);
+>>>>>>> d4b4981e8f902af6190563156090e7f1efdb6324
     }
 
     private void Flip()
@@ -73,7 +86,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
+<<<<<<< HEAD
         facingRight = !facingRight;
+=======
+        facingRight = !facingRight; 
+>>>>>>> d4b4981e8f902af6190563156090e7f1efdb6324
         LaunchOffset.transform.Rotate(0f, 180f, 0f);
     }
 }
