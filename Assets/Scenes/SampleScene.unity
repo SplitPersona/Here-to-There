@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportDestination
       objectReference: {fileID: 0}
+    - target: {fileID: 4323030482732708255, guid: 95ab8390562183d44aa55289b2e6cf20, type: 3}
+      propertyPath: m_TagString
+      value: Teleporter
+      objectReference: {fileID: 0}
     - target: {fileID: 8785321338177077761, guid: 95ab8390562183d44aa55289b2e6cf20, type: 3}
       propertyPath: m_RootOrder
       value: -1
