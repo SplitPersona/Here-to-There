@@ -310,7 +310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785321338177077761, guid: 95ab8390562183d44aa55289b2e6cf20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.70435
+      value: -4.676
       objectReference: {fileID: 0}
     - target: {fileID: 8785321338177077761, guid: 95ab8390562183d44aa55289b2e6cf20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   jumpHeight: 5
-  TeleportPrefab: {fileID: 6228376370425058517, guid: e4577e08c6cd26d40b4c0feebfa7fd0a, type: 3}
+  TeleportPrefab: {fileID: 5379978724978773872, guid: e4577e08c6cd26d40b4c0feebfa7fd0a, type: 3}
   LaunchOffset: {fileID: 672696012}
 --- !u!70 &828589155
 CapsuleCollider2D:
