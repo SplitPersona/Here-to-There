@@ -28,12 +28,12 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-    soundEffectsSource = gameObject.AddComponent<AudioSource>();
-    backgroundMusicSource = gameObject.AddComponent<AudioSource>();    
+        soundEffectsSource = gameObject.AddComponent<AudioSource>();
+        backgroundMusicSource = gameObject.AddComponent<AudioSource>();    
    
-   backgroundMusicSource.clip = backgroundMusic;
-   backgroundMusicSource.loop = true; 
-   backgroundMusicSource.Play();
+        backgroundMusicSource.clip = backgroundMusic;
+        backgroundMusicSource.loop = true; 
+        backgroundMusicSource.Play();
     }
 
     public void PlayJumpSound()

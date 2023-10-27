@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Teleporter
+  - Obstacle
   layers:
   - Default
   - TransparentFX
